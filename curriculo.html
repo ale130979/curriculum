@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currículo – Alessander Dutra Oliveira Santos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function exportPDF() {
+      window.print();
+    }
+
+    async function shareCV() {
+      const shareData = {
+        title: 'Currículo – Alessander Dutra',
+        text: 'Confira meu currículo profissional em HTML/CSS',
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          console.error('Erro ao compartilhar:', err);
+        }
+      } else {
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          alert('Link copiado para a área de transferência!');
+        } catch (err) {
+          prompt('Copie este link:', window.location.href);
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="name">Alessander Dutra Oliveira Santos</h1>
+    <p class="contact">
+      📱 (11) 94053-8426 | ✉️ <a href="mailto:alessander.dutra.santos@gmail.com">alessander.dutra.santos@gmail.com</a> | 🔗 <a href="https://www.linkedin.com/in/alessander-dutra" target="_blank">linkedin.com/in/alessander-dutra</a>
+    </p>
+    <p class="subtitle">Product Management | Product Marketing | Product Owner | PMO | SCRUM</p>
+  </header>
+
+  <div class="actions">
+    <button onclick="exportPDF()">Exportar para PDF</button>
+    <button onclick="shareCV()">Compartilhar</button>
+  </div>
+
+  <main class="container">
+    <section class="section">
+      <h2>Qualificação Profissional</h2>
+      <ul class="bullet-list">
+        <li>Mais de 12 anos liderando times multifuncionais em ambientes ágeis, com foco em tecnologia, inovação e resultados.</li>
+        <li>Desenvolvimento e evolução de produtos digitais, implementações em nuvem (AWS, Oracle) e otimização de processos (Scrum, Kanban).</li>
+        <li>Experiência em meios de pagamento com conformidade PCI-DSS, unindo segurança e performance.</li>
+        <li>Análise de dados com Power BI e SQL Server para decisões estratégicas e testes A/B.</li>
+        <li>Domínio de Jira, Confluence, Office 365, infraestrutura em nuvem e práticas de DevOps.</li>
+        <li>Comunicação eficaz com stakeholders, foco em otimização de custos e soluções escaláveis.</li>
+      </ul>
+      <div class="highlights">
+        <p><strong>Resultados Expressivos:</strong></p>
+        <ul class="bullet-list">
+          <li>Aumento de 30% na satisfação de clientes com novos produtos</li>
+          <li>Redução de 25% no tempo de desenvolvimento usando plataformas low-code</li>
+          <li>98% dos lançamentos sem defeitos com QA rigoroso e testes A/B</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Experiência Profissional</h2>
+
+      <article class="job">
+        <h3>Product Manager</h3>
+        <p class="company">Altec Sistemas, São Paulo • Jul/2019 – Abr/2025</p>
+        <ul class="bullet-list">
+          <li>Estratégia de produto alinhada a stakeholders internos e externos.</li>
+          <li>Plataformas low-code: –25% no tempo de entrega.</li>
+          <li>Gerência de equipe ágil (15 pessoas) com foco em autonomia.</li>
+          <li>Adoção de produto +20% via análise competitiva.</li>
+          <li>10+ dashboards em Power BI, melhorando decisões em 40%.</li>
+          <li>Processo de QA e testes A/B: 98% de lançamentos sem defeitos.</li>
+          <li>Conformidade PCI-DSS no projeto de pagamentos Paggi.</li>
+          <li>Uptime 99,9% e –10% nos custos de infraestrutura.</li>
+          <li>Jira e Confluence do zero: –20% no onboarding.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Gerente de Suporte Técnico</h3>
+        <p class="company">Altec Sistemas, São Paulo • Abr/2017 – Jul/2019</p>
+        <ul class="bullet-list">
+          <li>Equipe de 10 técnicos com 95% de aderência ao SLA.</li>
+          <li>Redesign do service desk: –20% no tempo médio de atendimento.</li>
+          <li>Relatórios gerenciais de performance para maior visibilidade.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Supervisor de Suporte Técnico</h3>
+        <p class="company">Altec Sistemas, São Paulo • Nov/2012 – Abr/2017</p>
+        <ul class="bullet-list">
+          <li>Melhoria de 15% na taxa de resolução de chamados.</li>
+          <li>Indicadores de qualidade e performance para melhoria contínua.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Analista Técnico</h3>
+        <p class="company">Sitel Brasil / Teleperformance, São Paulo • 2007 – 2009</p>
+        <ul class="bullet-list">
+          <li>90% de satisfação dos clientes em suporte técnico de alta performance.</li>
+          <li>95% de resolução dentro do SLA em escalonamentos críticos.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Formação Acadêmica</h2>
+      <p>Bacharelado em Sistemas de Informação – UNINOVE, São Paulo</p>
+    </section>
+
+    <section class="section">
+      <h2>Certificações Relevantes</h2>
+      <ul class="bullet-list">
+        <li>Scrum Product Owner & Scrum Master (International Scrum Institute)</li>
+        <li>Kanban Certified | Management 3.0 White Belt</li>
+        <li>Lean Six Sigma (Grupo Voitto)</li>
+        <li>Fundamentos de DevOps e ITIL v3</li>
+        <li>Microsoft SQL Server & Data Warehouse</li>
+        <li>Liderança Estratégica (Escola Conquer)</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Idiomas</h2>
+      <ul class="bullet-list">
+        <li>Inglês: Proficiência Técnica</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Diferenciais</h2>
+      <ul class="bullet-list">
+        <li>Vivência completa no ciclo de vida de produtos digitais</li>
+        <li>Integração com times técnicos e de negócios</li>
+        <li>Conexão entre dados, pessoas e processos para gerar valor</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>💻 Desenvolvido por Alessander Dutra 💻</p>
+  </footer>
+</body>
+</html>
